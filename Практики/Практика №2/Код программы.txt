@@ -1,0 +1,31 @@
+#include <8051.h>
+void main()
+{
+unsigned char i,j,k;
+unsigned char massiv [11]=
+{
+0x90,
+0x80,
+0xF8,
+0x82,
+0x92,
+0x99,
+0xB0,
+0xA4,
+0xF9,
+0xC0,
+0xFF
+};
+P2=massiv[10];
+P1=0x00;
+for(i=9;i>0;i--)//iteracii ot 1 do 9
+{ 
+             for(k=0;k<10;k++)// chisla ot 9 do 0
+            {
+             P2=massiv[k];
+             for(j=0;j<100;j++)
+             continue;
+            }
+}
+P2=massiv[10];
+}
