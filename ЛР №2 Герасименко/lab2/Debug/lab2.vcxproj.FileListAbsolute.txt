@@ -1,0 +1,4 @@
+C:\Users\class\Desktop\lab2\Debug\lab2.exe
+C:\Users\class\Desktop\lab2\Debug\lab2.pdb
+E:\лаба2\lab2\Debug\lab2.exe
+D:\Учеба 6 семестр\ЦУиМп 6 семестр\Лабы\ЛР №2\lab2\Debug\lab2.exe
