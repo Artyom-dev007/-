@@ -1,0 +1,40 @@
+MAIN                                                                                                          PAGE 1
+
+                       1    $MOD51
+0000                   2    org 0
+0000 020016            3    jmp start
+0003                   4    org 0003h
+0003 020013            5    jmp proc_INT0
+0013                   6    org 0013h
+0013                   7    proc_INT0:
+0013 B286              8    cpl P0.6
+0015 32                9    Reti
+0016                  10    start:
+0016 758000           11    mov P0,#0
+0019 759000           12    mov P1,#0
+001C 75A000           13    mov P2,#0
+001F 75B000           14    mov P3,#0
+0022 D2AF             15    setb IE.7
+0024 D2A8             16    setb IE.0
+0026 758801           17    mov TCON,#01h
+0029 D2B8             18    setb IP.0
+002B                  19    m1:
+002B D2B6             20    setb P3.6
+002D C2B6             21    clr P3.6
+002F 8590A0           22    mov P2,P1
+0032 80F7             23    jmp m1
+                      24    END
+
+VERSION 1.2k ASSEMBLY COMPLETE, 0 ERRORS FOUND
+MAIN                                                                                                          PAGE 2
+
+IE . . . . . . . . . . . . . . .  D ADDR  00A8H  PREDEFINED  
+IP . . . . . . . . . . . . . . .  D ADDR  00B8H  PREDEFINED  
+M1 . . . . . . . . . . . . . . .  C ADDR  002BH  
+P0 . . . . . . . . . . . . . . .  D ADDR  0080H  PREDEFINED  
+P1 . . . . . . . . . . . . . . .  D ADDR  0090H  PREDEFINED  
+P2 . . . . . . . . . . . . . . .  D ADDR  00A0H  PREDEFINED  
+P3 . . . . . . . . . . . . . . .  D ADDR  00B0H  PREDEFINED  
+PROC_INT0. . . . . . . . . . . .  C ADDR  0013H  
+START. . . . . . . . . . . . . .  C ADDR  0016H  
+TCON . . . . . . . . . . . . . .  D ADDR  0088H  PREDEFINED  
